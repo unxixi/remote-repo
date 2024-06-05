@@ -1,0 +1,56 @@
+我就修改看看情况
+Git常用命令速查表如下，按照功能分类进行了归纳：
+
+一、基础命令
+初始化仓库
+git init：初始化一个新的Git仓库。
+查看状态
+git status：查看当前工作区、暂存区的状态。
+添加文件到暂存区
+git add 文件名：将文件添加到暂存区。
+git add .：添加所有变更到暂存区。
+提交
+git commit -m "备注"：提交暂存区的变更到本地仓库，并添加提交注释。
+git commit -am "备注"：跳过暂存区，直接提交工作区的变更。
+查看提交历史
+git log：查看提交历史记录。
+git show commit_id：查看指定提交的详细信息。
+二、分支管理
+查看分支
+git branch：查看本地所有分支。
+git branch -a：查看所有分支（包括远程分支）。
+git branch -r：查看远程所有分支。
+创建分支
+git checkout -b 分支名：创建并切换到新分支。
+切换分支
+git checkout 分支名：切换到指定分支。
+合并分支
+通常使用图形化工具或在IDE中进行。
+删除分支
+git branch -d 分支名：删除本地分支。
+三、远程仓库操作
+添加远程仓库
+git remote add [shortname] [url]：为远程仓库指定别名和URL。
+查看远程仓库
+git remote -v：查看已配置的远程仓库信息。
+拉取远程变更
+git pull [remote] [branch]：拉取远程分支的变更并合并到当前分支。
+推送本地变更
+git push [remote] [branch]：推送本地分支的变更到远程仓库。
+git push [remote] --force：强行推送当前分支到远程仓库，即使有冲突。
+git push [remote] --all：推送所有分支到远程仓库。
+四、撤销操作
+撤销工作区修改
+git checkout .：撤销所有工作区的修改。
+git checkout 文件名：撤销指定文件的修改。
+撤销暂存区修改
+通常先撤销工作区的修改，再重新git add。
+撤销提交
+git revert 版本号：创建一个新的提交来撤销指定提交的变更。
+git reset --hard 版本号：撤销到指定提交，并丢弃之后的变更（慎用）。
+五、其他常用命令
+git diff：查看工作区与暂存区的差异。
+git reflog：查看引用记录，有助于撤销或找回之前的HEAD状态。
+git show --name-only [commit]：显示某次提交中更改的文件名。
+git help：查看Git命令的帮助信息。
+请注意，以上命令只是Git常用命令的一部分，Git还提供了许多其他高级功能和命令。在使用Git时，建议结合图形化工具或IDE的Git插件，以更方便地进行版本控制操作。
